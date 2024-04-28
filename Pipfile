@@ -5,6 +5,7 @@ name = "pypi"
 
 [scripts]
 dev = "python run.py"
+validator = "python validator_raw.py"
 
 [packages]
 pylint = "*"
@@ -12,6 +13,7 @@ pre-commit = "*"
 python-barcode = "*"
 pillow = "*"
 flask = "*"
+cerberus = "*"
 
 [dev-packages]
 
