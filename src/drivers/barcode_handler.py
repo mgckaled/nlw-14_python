@@ -15,4 +15,4 @@ class BarcodeHandler:
 
         tag.save(filename)
 
-        return filename  # Retorna o caminho completo onde o código de barras foi salvo
+        return filename
