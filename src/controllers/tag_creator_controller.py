@@ -1,3 +1,4 @@
+import os
 from typing import Dict
 
 from src.drivers.barcode_handler import BarcodeHandler
@@ -19,10 +20,10 @@ class TagCreatorController:
         return path_from_tag
 
     def __format_response(self, path_from_tag: str) -> Dict:
+        barcodes_folder = os.path.abspath("barcodes")
+        barcode_path = os.path.join(barcodes_folder, f"{path_from_tag}")
         return {
-            "data": {
-                "type": "Tag Image",
-                "count": 1,
-                "path": f'{path_from_tag}.png'
-            }
-        }
+            "data": {"type": "Tag Image",
+                     "count": 1,
+                     "path": barcode_path
+                     }}
