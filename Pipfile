@@ -5,6 +5,8 @@ name = "pypi"
 
 [scripts]
 dev = "python run.py"
+test = "pytest"
+test-list = "pytest -s -v"
 validator = "python validator_raw.py"
 
 [packages]
@@ -14,6 +16,7 @@ python-barcode = "*"
 pillow = "*"
 flask = "*"
 cerberus = "*"
+pytest = "*"
 
 [dev-packages]
 
